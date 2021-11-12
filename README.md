@@ -10,9 +10,11 @@ Call Rate = No. of called genotypes (0/0, 0/1, 0/2, 1/2, etc and not ./.) / Tota
 
 Based on the user provided cutoff, a variant will be filtered out if the call rate is less than the user input.
 
+If the --by-samples arguement is passed then the program will filter out samples with a lower call rate than the threshhold.
+
 Usage:
 
-python vcf_callratecheck.py input.vcf cutoff
+python vcf_callratecheck.py input.vcf cutoff [--by-samples]
 
 Output:
 The script creates a VCF file with variants that passed the thresold and a log file in the format of a VCF with variants that failed to pass the thresold.
